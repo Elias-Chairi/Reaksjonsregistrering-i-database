@@ -1,0 +1,218 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #0f3d3b;
+    overflow: hidden;
+}
+
+#bakgrunn{
+    height: 100vh;
+    width: 100%;
+    background-image: url("bilder/bakgrunn.png");
+    background-size: 100% 100vh;
+
+    display: flex;
+}
+
+#venstre{
+    flex: 1;
+    /* border: solid red 5px; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.venstre{
+    flex: 1;
+    /* border: solid purple 5px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input_navn, #romnavn{
+    width: 500px;
+    height: 70px;
+    font-size: xx-large;
+    border: solid #287677 7px;
+    padding-left: 5px;
+}
+#romnavn{
+    width: 350px;
+    border: solid #20c3bd 7px;
+}
+
+.input_reaksjon{
+    height: 20px;
+    width: 20px;
+}
+
+#input_send{
+    width: 350px;
+    height: 70px;
+    background-color: #20c3bd;
+    border: solid #1a9b96 1px;
+    font-size: x-large;
+    border-radius: 25px;
+}
+
+#input_send:hover{
+    background-color: #1c9692;
+}
+
+#input_send:active{
+    background-color: #1c7b78;
+    color: white;
+}
+
+#reaksjonsdiv{
+    flex: 0.1;
+}
+
+#hoyre{
+    flex: 1;
+    /* display: flex; */
+    /* border: solid red 5px; */
+}
+
+#åpne_rompanel{
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+    border: solid #1a9b96 1px;
+    background-color: #20c3bd;
+
+    top: -125px;
+    right: 100px;
+    position: absolute;
+    z-index: 5;
+}
+
+#åpne_rompanel:hover{
+    background-color: #1c9692;
+}
+
+#åpne_rompanel:active{
+    background-color: #1c7b78;
+}
+
+#åpne_rompanel > div{
+    width: 150px;
+    height: 8px;
+    background-color: black;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#åpne_rompanel > div:first-child{
+    margin-top: 90px;
+}
+
+#utvidelses_div_rom{
+    width: 0px;
+    height: 0px;
+    background-color: #1a6260;
+    /* background-image: url("utvidelse.png");
+    background-size: 100% 100vh; */
+
+    right: 225px;
+    position: absolute;
+
+    transition: width 1s, height 1s, right 1s;
+}
+
+#utvidelses_div_rom > div, #utvidelses_div_rom > form > div{
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#utvidelses_div_rom > div > h1{
+    font-family: Arial, sans-serif;
+}
+
+#utvidelses_div_rom > div > select{
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    background: white;
+}
+
+#utvidelses_div_rom > div > button, #utvidelses_div_rom > form > div > input[type=submit]{
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    border-radius: 50px;
+    border: solid #1a9b96 1px;
+    background-color: #20c3bd;
+}
+
+#utvidelses_div_rom > div > button:hover, #utvidelses_div_rom > form > div > input[type=submit]:hover{
+    background-color: #1c9692;
+}
+
+#utvidelses_div_rom > div > button:active, #utvidelses_div_rom > form > div > input[type=submit]:active{
+    background-color: #1c7b78;
+    color: white;
+}
+
+
+
+/* HIDE RADIO */
+input[type=radio], input[type=checkbox] { 
+    display: none;
+}
+
+/* IMAGE STYLES */
+input[type=radio] + img , input[type=checkbox] + img{
+  cursor: pointer;
+  width: 50px;
+}
+
+/* CHECKED STYLES */
+input[type=radio]:checked + img , input[type=checkbox]:checked + img{
+  outline: 3px solid #20c3bd;
+}
+
+
+
+#logg_boks{
+    max-width: 100%;
+    margin-top: 250px;
+    margin-left: 380px;
+
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#logg_boks > div > table{
+    width: 100%;
+    line-height: 2.5;
+}
+
+#logg_boks > div > table > tbody > tr > th{
+    text-align: start;
+}
+
+#logg_boks > div > table > tbody > tr > td{
+    width: calc(100%/3);
+    text-align: center;
+
+    /* border: solid red 2px; */
+}
+
+#logg_boks > div > table > tbody > tr > td > div{ /* for å sentrere bilde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logg_boks > div > table > tbody > tr > td > div > img{
+    width: 30px;
+}
